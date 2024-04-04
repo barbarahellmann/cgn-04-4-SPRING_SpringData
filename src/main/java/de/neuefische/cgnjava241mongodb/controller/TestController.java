@@ -27,8 +27,7 @@ public class TestController {
     public List<Student> findByAgeAndName(@PathVariable int age, @PathVariable String name){
         return repo.findAllByAgeAndName(age,name);
     }
-
-
+    
     @GetMapping("/{id}")
     public Student getStudentById(@PathVariable String id){
         return repo.findById(id) // kommt automatisch als optional
